@@ -6,9 +6,7 @@ Thumbs.db
 # Build Files #
 
 bin
-target
-build/
-.gradle
+
 
 # Eclipse Project Files #
 
@@ -21,7 +19,7 @@ build/
 *.iml
 *.ipr
 *.iws
-*.idea
+
 
 # Test files
 
