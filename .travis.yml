@@ -1,13 +1,11 @@
-sudo: false
 language: java
-jdk:
-- oraclejdk8
-script:
-- test/run.sh
 
-before_install:
-  - chmod +x run.sh
+gradle check
 
-notifications:
-  slack:
-    secure: WcsTvFYZFgpkY5Czx7mp09KS3VnW56/7tPVplhkUhpI/ga1vD0xnKv/BVVrELMh2QCdurEcr/4oJ7SPq5y5kKElGjFB4egP+pGGeQHwdRIipgcZyAyjwBojKIwZoTH/3kKegT0ECzmGUFz8Lza1+lTllX4DuyORFaizoF6ireoA=
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
